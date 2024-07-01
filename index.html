@@ -25,27 +25,41 @@
             width: 70%;
             margin: 50px auto;
             display: block;
+            font-size: 20px;
             box-shadow: 0px 0px 3px 1px black;
+        }
+        #result{
+            height: 200px;
+            width: 70%;
+            margin: 50px auto;
+            display: block;
+            font-size: 20px;
         }
         #btn-submit{
             padding: 10px;
             font-size: 20px;
             border-radius: 20px 90px 90px 20px;
-            margin-top: 250px;
-            margin-left: 210px;
+            margin-left: 200px;
+            border: 2.5px solid black;
         }
     </style>
 </head>
 <body>
     <h2 class="heading" id="heading">Text Convertor</h2>
     <input type="text" class="input-box" id="input-text">
-    <p></p>
+    <p id="result"></p>
     <div>
-        <button id="btn-submit">UpperCase</button>
+        <button id="btn-submit" onclick="upper()">UpperCase</button>
         <button id="btn-submit">LowerCase</button>
         <button id="btn-submit">Count</button>
         <button id="btn-submit">Char count</button>
-
     </div>
+    <script>
+        function upper(){
+            const inputElement = document.getElementById("input-text")
+            const resultElement = document.getElementById("result")
+            resultElement.innerText = inputElement.value.toUpperCase()
+        }
+    </script>
 </body>
 </html>
