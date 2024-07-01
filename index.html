@@ -25,7 +25,7 @@
             width: 70%;
             margin: 50px auto;
             display: block;
-            font-size: 20px;
+            font-size: 30px;
             box-shadow: 0px 0px 3px 1px black;
         }
         #result{
@@ -33,11 +33,11 @@
             width: 70%;
             margin: 50px auto;
             display: block;
-            font-size: 20px;
+            font-size: 30px;
         }
         #btn-submit{
             padding: 10px;
-            font-size: 20px;
+            font-size: 25px;
             border-radius: 20px 90px 90px 20px;
             margin-left: 200px;
             border: 2.5px solid black;
@@ -52,7 +52,7 @@
         <button id="btn-submit" onclick="upper()">UpperCase</button>
         <button id="btn-submit" onclick="lower()">LowerCase</button>
         <button id="btn-submit">Count</button>
-        <button id="btn-submit">Char count</button>
+        <button id="btn-submit" onclick="charcount()">Char count</button>
     </div>
     <script>
         function upper(){
@@ -64,6 +64,11 @@
             const inputElement = document.getElementById("input-text")
             const resultElement = document.getElementById("result")
             resultElement.innerText = inputElement.value.toLowerCase()
+        }
+        function charcount(){
+            const inputElement = document.getElementById("input-text")
+            const resultElement = document.getElementById("result")
+            resultElement.innerText = `Total Charactor is :${inputElement.value.length}`
         }
     </script>
 </body>
