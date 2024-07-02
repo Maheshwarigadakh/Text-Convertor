@@ -51,7 +51,7 @@
     <div>
         <button id="btn-submit" onclick="upper()">UpperCase</button>
         <button id="btn-submit" onclick="lower()">LowerCase</button>
-        <button id="btn-submit">Count</button>
+        <button id="btn-submit" onclick="wordcount()">Word Count</button>
         <button id="btn-submit" onclick="charcount()">Char count</button>
     </div>
     <script>
@@ -65,11 +65,17 @@
             const resultElement = document.getElementById("result")
             resultElement.innerText = inputElement.value.toLowerCase()
         }
+        function wordcount(){
+            const inputElement = document.getElementById("input-text")
+            const resultElement = document.getElementById("result")
+            resultElement.innerText = `Total words is :${inputElement.value.split(" ").length}`
+        }
         function charcount(){
             const inputElement = document.getElementById("input-text")
             const resultElement = document.getElementById("result")
             resultElement.innerText = `Total Charactor is :${inputElement.value.length}`
         }
+        
     </script>
 </body>
 </html>
